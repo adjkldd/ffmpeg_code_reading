@@ -43,16 +43,16 @@ ln -s libv4l1-videodev.h linux/videodev.h
   for f in `ls yuv/*`; do ./get_yuv_compo $f -s 960x400; done
   ```
 
-  ### 运行最初版编码
+### 运行最初版编码
 
-  * 音频
+* 音频
 
-    `./ffmpeg -vn -ac 2 -ar 44100  -ab 128 /home/ldd/volte/foo/foo.rm /home/ldd/volte/foo/out.pcm`
+  `./ffmpeg -vn -ac 2 -ar 44100  -ab 128 /home/ldd/volte/foo/foo.rm /home/ldd/volte/foo/out.pcm`
 
-  * 视频
+* 视频
 
-    `./ffmpeg -s 960x400 -r 24 -b 200 -an /home/ldd/volte/foo/foo.rm /home/ldd/volte/foo/yuv/frames`
+  `./ffmpeg -s 960x400 -r 24 -b 200 -an /home/ldd/volte/foo/foo.rm /home/ldd/volte/foo/yuv/frames`
 
-  * 音视频
+* 音视频
 
-    `./ffmpeg -s 960x400 -r 24 -ac 2 -ar 44100 -b 200 -ab 128 /home/ldd/volte/foo/foo.rm /home/ldd/volte/foo/yuv/frames /home/ldd/volte/foo/out.pcm`
+  `./ffmpeg -s 960x400 -r 24 -ac 2 -ar 44100 -b 200 -ab 128 /home/ldd/volte/foo/foo.rm /home/ldd/volte/foo/yuv/frames /home/ldd/volte/foo/out.pcm`
